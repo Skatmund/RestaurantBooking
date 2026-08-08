@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use App\Mail\ReservationConfirmed;
+use Illuminate\Support\Facades\Mail;
 
 class ReservationController extends Controller
 {
@@ -50,23 +52,19 @@ class ReservationController extends Controller
     {
         $reservation = Reservation::findOrFail($id);
 
-        $validated = $request->validate([
-            'name' => 'sometimes|string|max:255',
-            'email' => 'sometimes|email|max:255',
-            'phone' => 'sometimes|string|max:30',
-            'guests' => 'sometimes|integer|min:1',
-            'date' => 'sometimes|date',
-            'time' => 'sometimes',
-            'requests' => 'nullable|string',
-            'status' => 'sometimes|string',
-        ]);
+        $oldStatus = $reservation->status;
 
-        $reservation->update($validated);
+        $reservation->update($request->all());
 
-        return response()->json([
-            'message' => 'Reservation updated successfully',
-            'reservation' => $reservation,
-        ]);
+        if (
+            $oldStatus !== 'confirmed' &&
+            $reservation->status === 'confirmed'
+        ) {
+            Mail::to($reservation->email)
+                ->send(new ReservationConfirmed($reservation));
+        }
+
+        return response()->json($reservation);
     }
 
     // Delete a reservation
