@@ -10,7 +10,7 @@ function Topbar() {
           Dashboard
         </h1>
         <p className="text-gray-500 text-sm">
-          Welcome back, Admin 👋
+          Welcome back, Admin
         </p>
       </div>
 

@@ -12,29 +12,29 @@ function Sidebar() {
     <aside className="w-64 min-h-screen bg-white shadow-lg p-6">
 
       <h1 className="text-3xl font-bold text-orange-600 mb-10">
-        TableEase
+        DineIn
       </h1>
 
       <nav className="space-y-3">
 
         <NavLink to="/dashboard" className={linkClass}>
-          🏠 Dashboard
+          Dashboard
         </NavLink>
 
         <NavLink to="/dashboard/reservations" className={linkClass}>
-          📅 Reservations
+          Reservations
         </NavLink>
 
         <NavLink to="/dashboard/customers" className={linkClass}>
-          👥 Customers
+          Customers
         </NavLink>
 
         <NavLink to="/dashboard/reports" className={linkClass}>
-          📊 Reports
+          Reports
         </NavLink>
 
         <NavLink to="/dashboard/settings" className={linkClass}>
-          ⚙️ Settings
+          Settings
         </NavLink>
 
       </nav>
