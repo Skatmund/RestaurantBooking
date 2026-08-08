@@ -39,12 +39,6 @@ function Sidebar() {
 
       </nav>
 
-      <div className="mt-16">
-        <button className="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition">
-          Logout
-        </button>
-      </div>
-
     </aside>
   );
 }
