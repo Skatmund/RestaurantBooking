@@ -8,7 +8,7 @@ function Hero() {
         {/* Left Side */}
         <div className="text-center lg:text-left">
           <span className="text-orange-600 font-semibold uppercase tracking-widest">
-            Welcome to TableEase
+            Welcome to DineIn
           </span>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mt-4 leading-tight">

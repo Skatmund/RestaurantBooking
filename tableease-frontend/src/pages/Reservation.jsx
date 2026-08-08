@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import Navbar from "../components/layout/Navbar";
 
 function Reservation() {
@@ -19,13 +20,35 @@ function Reservation() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    console.log(formData);
+  try {
+    const response = await axios.post(
+      "http://127.0.0.1:8000/api/reservations",
+      formData
+    );
+
+    console.log(response.data);
 
     alert("Reservation submitted successfully!");
-  };
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      guests: "",
+      date: "",
+      time: "",
+      requests: "",
+    });
+
+  } catch (error) {
+    console.error(error);
+
+    alert("Something went wrong. Please try again.");
+  }
+};
 
   return (
     <>

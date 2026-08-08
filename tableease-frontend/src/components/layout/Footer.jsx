@@ -5,7 +5,7 @@ function Footer() {
 
         <div>
           <h2 className="text-3xl font-bold text-orange-500">
-            TableEase
+            DineIn
           </h2>
 
           <p className="mt-4 text-gray-400">
@@ -50,14 +50,14 @@ function Footer() {
           </p>
 
           <p className="text-gray-400">
-            ✉️ hello@tableease.com
+            ✉️ hello@dinein.com
           </p>
         </div>
 
       </div>
 
       <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
-        © 2026 TableEase. All rights reserved.
+        © 2026 DineIn. All rights reserved.
       </div>
     </footer>
   );

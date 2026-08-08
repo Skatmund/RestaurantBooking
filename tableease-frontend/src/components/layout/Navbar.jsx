@@ -10,7 +10,7 @@ function Navbar() {
           to="/"
           className="text-3xl font-bold text-orange-600"
         >
-          TableEase
+          DineIn
         </Link>
 
         {/* Navigation */}
