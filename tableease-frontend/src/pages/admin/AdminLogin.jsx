@@ -101,7 +101,6 @@ function AdminLogin() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="staff@dinein.com"
               className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             />
@@ -117,7 +116,6 @@ function AdminLogin() {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="Enter your password"
               className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             />
