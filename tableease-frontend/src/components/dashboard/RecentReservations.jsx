@@ -169,6 +169,10 @@ function RecentReservations({ searchTerm, statusFilter,}) {
                 </th>
 
                 <th className="py-3">
+                  Phone
+                </th>
+
+                <th className="py-3">
                   Guests
                 </th>
 
@@ -212,6 +216,10 @@ function RecentReservations({ searchTerm, statusFilter,}) {
                       </p>
 
                     </div>
+                  </td>
+
+                  <td className="py-4">
+                    {reservation.phone}
                   </td>
 
                   <td className="py-4">

@@ -1,0 +1,5 @@
+cd C:\Users\loise\RestaurantBooking\tableease-frontend
+npm run dev
+
+cd C:\Users\loise\RestaurantBooking\tableease-backend
+php -S 127.0.0.1:8000 -t public

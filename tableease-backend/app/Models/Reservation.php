@@ -16,4 +16,8 @@ class Reservation extends Model
         'requests',
         'status',
     ];
+    protected $casts = [ // for automatic encryption itech
+        'phone' => 'encrypted',
+        'email' => 'encrypted',
+    ];
 }
